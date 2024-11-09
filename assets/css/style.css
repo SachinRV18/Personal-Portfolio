@@ -271,71 +271,31 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
-  font-size: 28px;
-  cursor: pointer;
   display: none;
-  line-height: 0;
-  transition: 0.5s;
-  position: fixed;
-  right: 15px;
-  top: 15px;
+  font-size: 1.5em;
+  color: #ecf0f1;
+  cursor: pointer;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    display: none; /* Hide initially */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #2c3e50;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar ul.show {
+    display: flex; /* Show when toggled */
+  }
+
   .mobile-nav-toggle {
     display: block;
   }
-
-  .navbar ul {
-    display: none;
-  }
-}
-
-.navbar-mobile {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
-  transition: 0.3s;
-  z-index: 999;
-  margin-top: 0;
-}
-
-.navbar-mobile .mobile-nav-toggle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.navbar-mobile ul {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 45px;
-  left: 15px;
-  padding: 10px 0;
-  overflow-y: auto;
-  transition: 0.3s;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.navbar-mobile li {
-  padding: 12px 20px;
-}
-
-.navbar-mobile li+li {
-  margin: 0;
-}
-
-.navbar-mobile a,
-.navbar-mobile a:focus {
-  font-size: 16px;
-  position: relative;
 }
 
 /*--------------------------------------------------------------
@@ -443,73 +403,253 @@ section .container {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+/* General Skills Section Styling */
 .skills .progress {
-  height: 60px;
+  height: 40px;  /* Reduced height of the progress bar */
   display: block;
   background: none;
-  border-radius: 0;
+  border-radius: 10px;
+  margin-bottom: 15px;  /* Reduced margin for compact spacing */
+  transition: background 0.3s ease-in-out;
 }
 
+/* Skill Title */
 .skills .progress .skill {
-  padding: 10px 0;
+  padding: 8px 15px;  /* Reduced padding for smaller text area */
   margin: 0;
   text-transform: uppercase;
-  display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #fff;
+  font-size: 16px;  /* Smaller font size for better fit */
+  position: relative;
+  z-index: 2;
 }
 
+/* Skill Percentage Value */
 .skills .progress .skill .val {
   float: right;
   font-style: normal;
+  font-weight: 700;
+  color: #e0e0e0;
 }
 
+/* Background for progress bar wrap */
 .skills .progress-bar-wrap {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Default Progress Bar Color */
+.skills .progress-bar {
+  background: linear-gradient(to right, #2196F3, #21CBF3);
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+/* Skill-Specific Progress Bar Colors */
+.skills .progress-bar.py {
+  background: linear-gradient(to right, #FF5722, #FF7043);  /* Python */
+}
+
+.skills .progress-bar.django {
+  background: linear-gradient(to right, #00B0FF, #2962FF);  /* Django */
+}
+
+.skills .progress-bar.aws {
+  background: linear-gradient(to right, #FF9800, #FF5722);  /* AWS */
+}
+
+.skills .progress-bar.js {
+  background: linear-gradient(to right, #00BCD4, #0097A7);  /* JavaScript */
+}
+
+.skills .progress-bar.git {
+  background: linear-gradient(to right, #F44336, #E53935);  /* Git/GitHub */
+}
+
+/* Hover Effects */
+.skills .progress-bar-wrap:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #18d26e;
+.skills .progress-bar-wrap:hover .progress-bar {
+  opacity: 1.1;
 }
+
+/* Card Styling */
+.skills .card {
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 5px;  /* Reduced bottom margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Makes the card content distributed evenly */
+  height: 100%;
+}
+
+/* Hover Effect on Card */
+.skills .card:hover {
+  background-color: #444;
+}
+
+/* Card Title */
+.skills .card-title {
+  font-size: 16px;  /* Smaller font size for card title */
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Icons */
+.skills .card-body i {
+  font-size: 20px;  /* Smaller icon size */
+  color: #fff;
+  margin-right: 10px;
+}
+
+/* Layout for Skills Cards */
+.skills .skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;  /* Space between the cards */
+}
+
+/* Four Cards per Row on Large Screens */
+.skills .col-md-3 {
+  flex: 0 0 calc(25% - 20px);  /* 4 cards per row on large screens */
+  margin-bottom: 20px;  /* Vertical space between rows */
+}
+
+/* Two Cards per Row on Medium Screens (tablets, laptops) */
+@media (max-width: 1024px) {
+  .skills .col-md-3 {
+    flex: 0 0 calc(50% - 20px);  /* Two cards per row */
+  }
+}
+
+/* One Card per Row on Small Screens (phones) */
+@media (max-width: 480px) {
+  .skills .col-md-3 {
+    flex: 0 0 100%;  /* One card per row */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Interests
 --------------------------------------------------------------*/
+/* Styling for Key Strengths */
 .interests .icon-box {
   display: flex;
   align-items: center;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
-  transition: ease-in-out 0.3s;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 10px;
+  margin: px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.interests .icon-box i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 1;
-}
-
+/* Font Size for h3 */
 .interests .icon-box h3 {
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-  color: #fff;
+  font-size: 10px;  /* Reduced font size */
+  font-weight: 600;
+  color: #faf8f8;
+  text-align: center;
+  margin-top: 10px;
 }
 
+/* Hover effect for icon-box */
 .interests .icon-box:hover {
-  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Icon Size */
+.interests .icon-box i {
+  font-size: 40px;  /* Icon size */
+  color: inherit;
+  margin-bottom: 15px;
+}
+
+/* Grid layout adjustments */
+@media (max-width: 992px) {
+  .interests .col-lg-3 {
+    flex: 0 0 50%; /* Two cards per row on medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .interests .col-lg-3 {
+    flex: 0 0 100%; /* One card per row on small screens */
+  }
+}
+
 
 /*--------------------------------------------------------------
 
 # Education
 --------------------------------------------------------------*/
+
+/* Unique styling for Contact Me section title */
+.contact-section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-section-title h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4ceb95;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-section-title h2::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  display: inline-block;
+  background: #4ceb95;
+  margin-top: 10px;
+}
+
+.contact-section-title p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.download-link {
+  color: #4ceb95;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-left: 10px;
+}
+
+.download-link i {
+  margin-right: 5px;
+}
+
+.download-link:hover {
+  color: #2a7f47;
+}
+
 .edu .edu-title {
   font-size: 26px;
   font-weight: 700;
@@ -637,6 +777,8 @@ section .container {
   background: rgba(204, 204, 204, 0.1);
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .services .icon-box .icon {
@@ -644,7 +786,7 @@ section .container {
   width: 64px;
   height: 64px;
   background: #18d26e;
-  border-radius: 5px;
+  border-radius: 50%;
   transition: all 0.3s ease-out 0s;
   display: flex;
   align-items: center;
@@ -655,7 +797,7 @@ section .container {
 
 .services .icon-box .icon i {
   color: #fff;
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .services .icon-box .icon::before {
@@ -666,7 +808,7 @@ section .container {
   height: 100%;
   width: 100%;
   background: rgba(255, 255, 255, 0.15);
-  border-radius: 5px;
+  border-radius: 50%;
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
@@ -678,7 +820,9 @@ section .container {
 }
 
 .services .icon-box h4 a {
-  color: #fff;
+  color: #cfc7c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .services .icon-box p {
@@ -690,6 +834,7 @@ section .container {
 .services .icon-box:hover {
   background: #18d26e;
   border-color: #18d26e;
+  transform: translateY(-10px);
 }
 
 .services .icon-box:hover .icon {
@@ -708,6 +853,13 @@ section .container {
 .services .icon-box:hover p {
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .services .icon-box {
+    padding: 60px 15px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -942,11 +1094,27 @@ section .container {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+/* General container styling */
+.contact .container {
+  max-width: 1200px;
+  color: #444444;
+}
+
+/* Section title */
+.contact .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Contact Info Box Styling */
 .contact .info-box {
   color: #444444;
   padding: 20px;
   width: 100%;
   background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .contact .info-box i.bx {
@@ -980,9 +1148,7 @@ section .container {
 
 .contact .info-box .social-links a {
   font-size: 18px;
-  display: inline-block;
   color: #fff;
-  line-height: 1;
   margin-right: 12px;
   transition: 0.3s;
 }
@@ -991,38 +1157,111 @@ section .container {
   color: #18d26e;
 }
 
-.contact .php-email-form {
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.08);
+/* General form styling */
+#contact-form {
+  max-width: 500px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 4px 12px rgba(221, 205, 205, 0.062);
+  font-family: Arial, sans-serif;
 }
 
-.contact .php-email-form .error-message {
+/* Form field styling */
+#contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+#contact-form .form-control {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: 0.3s;
+}
+
+#contact-form .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.11);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Placeholder styling */
+#contact-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+/* Button styling */
+#contact-form button[type="submit"] {
+  background: #266df0;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 1.1rem;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s;
+  font-weight: bold;
+  width: 100%;
+}
+
+#contact-form button[type="submit"]:hover {
+  background: hsl(234, 68%, 55%);
+}
+
+/* Message boxes styling */
+#contact-form .sent-message,
+#contact-form .error-message,
+#contact-form .loading {
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+#contact-form .sent-message {
+  display: none;
+  color: #82be6a;
+  background-color: #030303;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.5s ease-out;
+}
+
+#contact-form .error-message {
+  display: none;
+  background-color: #ed3c0d;
+  color: #fff;
+}
+
+#contact-form .loading {
   display: none;
   background: rgba(255, 255, 255, 0.08);
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  background: rgba(255, 255, 255, 0.08);
-  background: #18d26e;
+  color: #fff;
   text-align: center;
   padding: 15px;
-  font-weight: 600;
 }
 
-.contact .php-email-form .loading {
-  display: none;
-  background: rgba(255, 255, 255, 0.08);
-  text-align: center;
-  padding: 15px;
+/* Loading spinner animation */
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .contact .php-email-form .loading:before {
@@ -1037,64 +1276,6 @@ section .container {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 0;
-  transition: 0.3s;
-  color: #fff;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  background-color: rgba(255, 255, 255, 0.11);
-}
-
-.contact .php-email-form input::-moz-placeholder,
-.contact .php-email-form textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
-  opacity: 1;
-}
-
-.contact .php-email-form input::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.3);
-  opacity: 1;
-}
-
-.contact .php-email-form input {
-  padding: 10px 15px;
-}
-
-.contact .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: #18d26e;
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: #15bb62;
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Credits

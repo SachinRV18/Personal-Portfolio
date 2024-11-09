@@ -25,17 +25,11 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Personal
-  * Updated: Jul 27 2023 with Bootstrap v5.3.1
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript" src="assets/js/contact.js" defer></script>
 </head>
 
 <body>
@@ -44,30 +38,31 @@
   <header id="header">
     <div class="container">
 
-      <h1><a href="index.html">Sachin RV</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-      <h2>I'm a passionate <span>Software Engineer</span> from Bangalore.</h2>
+      <h1><a href="index.html">"Building the Future with Code"</a></h1>
+      <h2 class="hero-subtitle">
+        I'm <span class="highlight">Sachin R V</span>, a <span class="highlight">Software Developer</span> from
+        Bangalore.
+      </h2>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#edu">Education</a></li>
+          <li><a class="nav-link" href="#about">About Me</a></li>
+          <li><a class="nav-link" href="#edu">Experience & Education</a></li>
           <li><a class="nav-link" href="#services">Projects</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
       <div class="social-links">
-        <a href="https://www.instagram.com/sach.rv" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.instagram.com/iamsachinrv" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="https://www.linkedin.com/in/sachrv" class="linkedin"><i class="bi bi-linkedin"></i></a>
         <a href="mailto:sachinrv1999@gmail.com"><i class="bx bxs-envelope"></i></a>
         <a href="https://github.com/SachinRV18" class="GitHUB"><i class="bx bxl-github"></i></a>
         <a href="https://www.facebook.com/sachin.rv.792" class="facebook"><i class="bi bi-facebook"></i></a>
-       
+
 
       </div>
 
@@ -90,140 +85,214 @@
           <img src="assets/img/sachin.jpg" class="img-fluid" alt="my image">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Software Engineer</h3>
+          <h3>Software Developer</h3>
           <p class="fst-italic">
-            Inventing and making it happen.
+            If I can code it, I can do it.
           </p>
           <div class="row">
             <div class="col-lg-6">
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>18 February 1999</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sachinrv1999@gmail.com</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91-7829607889</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Bangalore, India</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master of computer application
+                <!-- Professional Information -->
+                <li><strong>Professional Information:</strong></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span id="experience">11
+                    months</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master of Computer Applications
                     (MCA)</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>College:</strong> <span>Nitte- NMIT Bengaluru</span>
-                </li>
-                <li><i class="bi bi-chevron-right"></i> <strong>CGPA:</strong> <span>9.23</span></li>
+
+                <hr> <!-- Horizontal line separating sections -->
+
+                <!-- Personal Information -->
+                <li><strong>Personal Information:</strong></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>18 February 19XX</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sachinrv1999@gmail.com</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91-782960XXXX</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Bangalore, India</span></li>
               </ul>
+
             </div>
           </div>
           <p>
-            Seeking a software engineering position as a fresher, aiming to apply my strong technical skills and passion
-            for programming to contribute to the development of innovative software solutions. I am eager to learn from
-            experienced professionals and grow in a dynamic organization while making a positive impact on users lives..
+            As a Software Developer with experience, I apply my technical skills to create efficient, innovative
+            solutions. Passionate about learning, I aim to contribute to projects that enhance user experiences and
+            deliver high-quality software in dynamic environments."
           </p>
         </div>
       </div>
 
     </div><!-- End About Me -->
 
-    <!-- ======= Skills  ======= -->
+    <!-- ======= Skills ======= -->
     <div class="skills container">
-
       <div class="section-title">
         <h2>Skills</h2>
       </div>
 
-      
-
       <div class="row skills-content">
 
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">Python <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              </div>
+        <!-- AWS -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Amazon Web Services (AWS)</h5>
+              <i class="material-icons" style="color: #FF9900;">cloud</i>
             </div>
           </div>
-
-          <div class="progress">
-            <span class="skill">Core Java <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">HTML <i class="val">100%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">CSS <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">JavaScript <i class="val">75%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
         </div>
 
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">SQL <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-              </div>
+        <!-- GCP -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Google Cloud Platform (GCP)</h5>
+              <i class="material-icons" style="color: #4285F4;">cloud_circle</i>
             </div>
           </div>
+        </div>
 
-          <div class="progress">
-            <span class="skill">PHP <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-              </div>
+        <!-- Python -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Python (Programming Language)</h5>
+              <i class="material-icons" style="color: #306998;">code</i>
             </div>
           </div>
+        </div>
 
-          <div class="progress">
-            <span class="skill">Bootstrap <i class="val">90%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              </div>
+        <!-- DSA -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Data Structures and Algorithms (DSA)</h5>
+              <i class="material-icons" style="color: #FF5722;">call_merge</i>
             </div>
           </div>
+        </div>
 
-          <div class="progress">
-            <span class="skill">Data Structures and Algorithms <i class="val">60%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-              </div>
+        <!-- Django -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Django (Web Framework)</h5>
+              <i class="material-icons" style="color: #8ad4b8;">web</i>
             </div>
           </div>
+        </div>
 
-          <div class="progress">
-            <span class="skill">Git / GitHUB <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-              </div>
+        <!-- MERN Stack -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">MERN Stack (MongoDB, Express.js, React, Node.js)</h5>
+              <i class="material-icons" style="color: #4CAF50;">web_asset</i>
             </div>
           </div>
+        </div>
 
+        <!-- JavaScript -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">JavaScript</h5>
+              <i class="material-icons" style="color: #F0DB4F;">code</i> <!-- JavaScript Icon -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Java -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Core Java</h5>
+              <i class="material-icons" style="color: #FF5C39;">code</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Git / GitHub -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Git / GitHub</h5>
+              <i class="bi bi-git"></i>
+            </div>
+          </div>
+        </div>
+        <!-- API Development -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">API Development</h5>
+              <i class="material-icons" style="color: #0061F2;">api</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Postman -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Postman</h5>
+              <i class="material-icons" style="color: #FF6C37;">post_add</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- boto3 -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">boto3 (AWS SDK for Python)</h5>
+              <i class="material-icons" style="color: #FF9900;">cloud_upload</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- YAML -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">YAML</h5>
+              <i class="material-icons" style="color: #5D8D8D;">code</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Azure DevOps -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Azure DevOps</h5>
+              <i class="material-icons" style="color: #0088D1;">developer_board</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- HTML / CSS -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">HTML / CSS</h5>
+              <i class="material-icons" style="color: #E34F26;">html</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Bootstrap (Frontend Framework)</h5>
+              <i class="material-icons" style="color: #563D7C;">grid_3x3</i>
+            </div>
+          </div>
         </div>
 
       </div>
-
     </div><!-- End Skills -->
 
-    <!-- ======= Interests ======= -->
+
+    <!-- ======= Key Strengths ======= -->
     <div class="interests container">
 
       <div class="section-title">
@@ -231,170 +300,238 @@
       </div>
 
       <div class="row">
+        <!-- Continuous Learning and Adaptability -->
         <div class="col-lg-3 col-md-4">
           <div class="icon-box">
-            <i class="ri-store-line" style="color: #ffbb2c;"></i>
+            <i class="material-icons" style="color: #ffbb2c;">school</i>
+            <h3>CONTINUOUS LEARNING AND ADAPTABILITY</h3>
+          </div>
+        </div>
+
+        <!-- Strive to Learn New Things -->
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #5578ff;">lightbulb</i>
             <h3>STRIVE TO LEARN NEW THINGS</h3>
           </div>
         </div>
+
+        <!-- Team Player -->
         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
-            <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-            <h3>BELIEVE IN CONTROL OVER OUTCOMES</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-            <h3>SEE TASKS OR PROJECTS THROUGH TO COMPLETION</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-            <h3>PRIORITIZE WORK TO MAXIMIZE RESULTS</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-database-2-line" style="color: #47aeff;"></i>
-            <h3>GO BEYOND WHAT IS REQUIRED</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
+            <i class="material-icons" style="color: #5578ff;">people</i>
             <h3>TEAM PLAYER</h3>
           </div>
         </div>
+
+        <!-- Strong Problem Solving and Analytical Thinking -->
+        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #5578ff;">psychology</i>
+            <h3>STRONG PROBLEM SOLVING AND ANALYTICAL THINKING</h3>
+          </div>
+        </div>
+
+        <!-- Proficiency in Cloud Computing -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #e80368;">cloud</i>
+            <h3>PROFICIENCY IN CLOUD COMPUTING</h3>
+          </div>
+        </div>
+
+        <!-- Collaboration and Teamwork -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #e361ff;">group_work</i>
+            <h3>COLLABORATION AND TEAMWORK</h3>
+          </div>
+        </div>
+
+        <!-- Expertise in Full Stack Development -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #47aeff;">code</i>
+            <h3>EXPERTISE IN FULL STACK DEVELOPMENT</h3>
+          </div>
+        </div>
+
+        <!-- Strong Understanding of Security Practices -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #ffa76e;">security</i>
+            <h3>STRONG UNDERSTANDING OF SECURITY PRACTICES</h3>
+          </div>
+        </div>
       </div>
 
-    </div><!-- End Interests -->
+    </div><!-- End Key Strengths -->
 
-     <!-- ======= HOBBIES ======= -->
+    <!-- ======= HOBBIES ======= -->
     <div class="interests container">
 
       <div class="section-title">
-        <h2>HOBBIES</h2>
+        <h2>Hobbies</h2>
       </div>
 
       <div class="row">
-        
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-            <h3>CRICKET PLAYER</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-            <h3>BADMINTION PLAYER</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-anchor-line" style="color: #b2904f;"></i>
-            <h3>LOVE TRAVELLING</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #b20969;"></i>
-            <h3>CYCLING</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-base-station-line" style="color: #ff5828;"></i>
-            <h3>INTEREST IN PHOTOGRAPHY</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-            <h3>LIKES EDITING</h3>
-          </div>
-        </div>
-      </div>
 
-    </div><!-- End Hobbies -->
+        <!-- Coding -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #f29d6b;">code</i>
+            <h3>Coding</h3>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #9e6dff;">highlight</i> <!-- Projects Icon -->
+            <h3>Projects</h3>
+          </div>
+        </div>
+
+        <!-- Cricket -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #11dbcf;">sports_cricket</i>
+            <h3>Cricket</h3>
+          </div>
+        </div>
+
+        <!-- Badminton -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #4233ff;">sports_basketball</i>
+            <h3>Badminton</h3>
+          </div>
+        </div>
+
+        <!-- Travelling -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #b2904f;">flight_takeoff</i>
+            <h3>Travelling</h3>
+          </div>
+        </div>
+
+        <!-- Cycling -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #fdf8fb;">directions_bike</i>
+            <h3>Cycling</h3>
+          </div>
+        </div>
+
+        <!-- Photography -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #f1e9e5;">camera_alt</i>
+            <h3>Photography</h3>
+          </div>
+        </div>
+
+        <!-- Video Editing -->
+        <div class="col-lg-3 col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="material-icons" style="color: #29cc61;">videocam</i>
+            <h3>Video Editing</h3>
+          </div>
+        </div>
+
+      </div><!-- End Hobbies -->
+    </div>
+
 
   </section><!-- End About Section -->
-
-  <!-- ======= Education Section ======= -->
+  <!-- ======= Experience and Education Section ======= -->
   <section id="edu" class="edu">
     <div class="container">
-
-      <div class="section-title">
-        <h2>Education</h2>
-        <p>Check My Education and Internships</p>
-      </div>
-
       <div class="row">
+
+        <div class="section-title">
+          <h2>Experience and Education</h2>
+          <p>Check out my experience and education</p>
+        </div>
+
+        <div class="contact-section-title">
+          <p>Please check out my Resume
+            <a href="assets/Resume/Sachin_Resume.pdf" download class="download-link">
+              <i class="bx bx-download"></i> Download Resume
+            </a>
+          </p>
+        </div>
+
+
+        <!-- Professional Experience Section (Left Side) -->
         <div class="col-lg-6">
-          
-
-          <h3 class="edu-title">Education</h3>
+          <h3 class="edu-title">Professional Experience</h3>
           <div class="edu-item">
-            <h4>Master of computer Application</h4>
-            <h5>2021 - 2023</h5>
-            <p><em>Nitte Meenakshi Institute of Technology, Bangalore</em></p>
-            <p>Completed my Post Graduation with an aggregate of 9.23CGPA and won the "Best Outstanding Student" award in the MCA Degree.</p>
-          </div>
-
-          <div class="edu-item">
-            <h4>Bachelor of computer Application</h4>
-            <h5>2017 - 2020</h5>
-            <p><em>Government First Grade College, Shikaripur</em></p>
-            <p>Completed my Graduation with an aggregate of 70.57%.</p>
-          </div>
-          <div class="edu-item">
-            <h4>PUC / 12<sup>th</sup></h4>
-            <h5>2015 - 2017</h5>
-            <p><em>Akshara Pre University College, Shikaripur</em></p>
-            <p>Completed PUC with an aggregate of 64.33% in Physics, Chemistry, Mathematics and Biology (PCMB) Specialization.</p>
-          </div>
-          <div class="edu-item">
-            <h4>SSLC / 10<sup>th</sup></h4>
-            <h5>2014 - 2015</h5>
-            <p><em>SCMVS, Shikaripur</em></p>
-            <p>Completed SSLC with an aggregate of 79.36%.</p>
+            <div class="experience-item">
+              <h4>Associate Developer - Coextrix Technologies Pvt Ltd</h4>
+              <h5><span id="experience">DEC 2023 - Present</span></h5>
+              <p><em>Bengaluru, Karnataka, India · Remote</em></p>
+              <ul>
+                <li>Technologies: Amazon Web Services (AWS), Google Cloud Platform (GCP), Python, Data Structures and
+                  Algorithms (DSA), Django, Node.js, Git / GitHub, API Development, Postman, boto3 (AWS SDK for Python),
+                  YAML, Azure DevOps.</li>
+                <li>Full-time role with responsibilities in Python development and AWS services.</li>
+                <li>Working on developing and deploying cloud-based applications.</li>
+              </ul>
+            </div>
           </div>
         </div>
+
+        <!-- Education Section (Right Side) -->
         <div class="col-lg-6">
-          <h3 class="edu-title">Internships</h3>
+          <h3 class="edu-title">Education</h3>
+          <div class="edu-item">
+            <h4>Master of Computer Application</h4>
+            <h5>2021 - 2023</h5>
+            <p><em>Nitte Meenakshi Institute of Technology, Bangalore</em></p>
+            <p>Completed my Post Graduation with an aggregate of 9.40 CGPA and won the "Best Outstanding Student" award
+              in the MCA Degree.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Internships Section -->
+      <h3 class="edu-title">Internships</h3>
+      <div class="row">
+        <div class="col-lg-6">
           <div class="edu-item">
             <h4>Java Developer Intern - WEBBLITZ SOFTWARE SOLUTIONS</h4>
             <h5>APR 2023 - JUN 2023</h5>
             <p><em>Bangalore, India </em></p>
-            <p>
             <ul>
               <li>Language: Java, JFrame, MySQL, JDBC.</li>
               <li>Tools: NetBeans.</li>
-              <li>Good understanding of object-oriented programming concepts with practical experience in real-time project
-                and also applying the OOP principles to develop robust and scalable system.</li>
+              <li>Good understanding of object-oriented programming concepts with practical experience in real-time
+                projects and applying OOP principles to develop robust and scalable systems.</li>
             </ul>
-            </p>
           </div>
+        </div>
+
+        <div class="col-lg-6">
           <div class="edu-item">
-            <h4>Python Programming Developer Intern.- BOLT IOT (INVENTROM PRIVATE LIMITED)</h4>
+            <h4>Python Programming Developer Intern - BOLT IOT (INVENTROM PRIVATE LIMITED)</h4>
             <h5>DEC 2022 – JAN 2023</h5>
             <p><em>Bangalore, India </em></p>
-            <p>
             <ul>
               <li>Language: Python and Machine Learning.</li>
-              <li>Tools: Replit, VS CODE.</li>
-              <li>Projects: Weather monitoring System, Cricket statistics generator, Detection of Positive & Negative
-                Statements.</li>
+              <li>Tools: Replit, VS Code.</li>
+              <li>Projects: Weather monitoring system, Cricket statistics generator, Detection of Positive & Negative
+                statements.</li>
             </ul>
-            </p>
           </div>
         </div>
       </div>
 
     </div>
-  </section><!-- End Education Section -->
+  </section>
+
+  <!-- ======= End of Experience and Education Section ======= -->
 
   <!-- ======= Projects Section ======= -->
   <section id="services" class="services">
@@ -402,59 +539,70 @@
 
       <div class="section-title">
         <h2>Projects</h2>
-        <p>My Works</p>
+        <p>Check out some of my works</p>
       </div>
 
       <div class="row">
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="icon-box">
-            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-            <h4><a href="">MULTI-AUTHORITY ACCESS CONTROL WITH ANONYMOUS AUTHENTICATION FOR PERSONAL HEALTH RECORD</a></h4>
+            <div class="icon"><i class="bx bx-money"></i></div>
+            <h4><a href="#">Expense Tracker</a>
+            </h4>
+            <p>Expense Tracker is a web application that allows you to track the daily expenses of the user and help
+              them to better manage their resources.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-heart"></i></div>
+            <h4><a href="#">MULTI-AUTHORITY ACCESS CONTROL WITH ANONYMOUS AUTHENTICATION FOR PERSONAL HEALTH RECORD</a>
+            </h4>
             <p>A personal health record (PHR) system is a smart health system that serves patients and doctors.</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="">LINE FOLLOWING ROBOT WITH OBSTACLE AVOIDANCE</a></h4>
-            <p>The primary scope of this project is to provide an efficient robot and effective solution for navigating a path 
-              while avoiding obstacles.</p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-          <div class="icon-box">
-            <div class="icon"><i class="bx bx-tachometer"></i></div>
-            <h4><a href="">E-BRIDGE BETWEEN TEACHERS AND STUDENT ASSISTANT ANDROID APP</a></h4>
-            <p>In this application we are going to introduce an android application for teachers. This Android app for 
-              teachers support basic functionalities such as adding student to each class/department, save notes, make 
-              schedules for classes etc.</p>
+            <div class="icon"><i class="bx bxl-ok-ru"></i></div>
+            <h4><a href="#">LINE FOLLOWING ROBOT WITH OBSTACLE AVOIDANCE</a></h4>
+            <p>The primary scope of this project is to provide an efficient robot and effective solution for navigating
+              a path while avoiding obstacles.</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-world"></i></div>
-            <h4><a href="">BIKE SHOWROOM MANAGEMENT SYSTEM MANAGEMENT SYSTEM</a></h4>
-            <p>Project is basically designed to reduce human manual work and to help Managers to serve customers as fast 
-              as possible. In this project we used Oracle to store databases and HTML and CSS to design front end.</p>
+            <div class="icon"><i class="bx bx-mobile-alt"></i></div>
+            <h4><a href="#">E-BRIDGE BETWEEN TEACHERS AND STUDENT ASSISTANT ANDROID APP</a></h4>
+            <p>This Android app for teachers supports basic functionalities such as adding students, saving notes, and
+              scheduling classes.</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-slideshow"></i></div>
-            <h4><a href="">Himalayan Tourism</a></h4>
-            <p>The primary scope of this project is to provide an Website which helps to handle a Tourism Website for Online booking and display the complete information regarding the individual places of Himalayan. </p>
+            <div class="icon"><i class="bx bx-store-alt"></i></div>
+            <h4><a href="#">BIKE SHOWROOM MANAGEMENT SYSTEM</a></h4>
+            <p>A system designed to reduce manual work and help managers serve customers quickly. It uses Oracle for the
+              database and HTML/CSS for the front end.</p>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
           <div class="icon-box">
-            <div class="icon"><i class="bx bx-arch"></i></div>
-            <h4><a href="">Personal Portfolio</a></h4>
-            <p>A Portfolio Website to shows the creativity and complete information of Myself.</p>
+            <div class="icon"><i class="bx bxl-trip-advisor"></i></div>
+            <h4><a href="#">HIMALAYAN TOURISM</a></h4>
+            <p>A website designed for online booking and displaying information about tourist places in the Himalayan
+              region.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-user-circle"></i></div>
+            <h4><a href="#">PERSONAL PORTFOLIO</a></h4>
+            <p>A portfolio website to showcase my skills and projects.</p>
           </div>
         </div>
 
@@ -463,100 +611,72 @@
     </div>
   </section><!-- End Projects Section -->
 
-  <!-- ======= Resume Section ======= -->
-  <section id="resume" class="resume">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume -  <a href="assets\Resume\Sachin_Resume.pdf"><u><em>Click here to Download</em></u></a></p>
-      </div>
-
-    </div>
-  </section><!-- End Resume Section -->
-
-  <!-- ======= Contact Section ======= -->
+  <!-- ======= Contact and Resume Section ======= -->
   <section id="contact" class="contact">
     <div class="container">
-
       <div class="section-title">
-        <h2>Contact</h2>
-        <p>Contact Me</p>
+        <h2>Contact Me</h2>
       </div>
 
       <div class="row mt-2">
-
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
+        <!-- Left Column: Contact Information -->
+        <div class="col-lg-5 d-flex flex-column justify-content-center">
+          <div class="info-box mb-4">
             <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>Vinayak Nagar, 15<sup>th</sup> Cross, Shikaripur, Shimoga (dt) 577427</p>
+            <h3>Current Location</h3>
+            <p>Bangalore, India</p>
           </div>
-        </div>
-
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
+          <div class="info-box mb-4">
             <i class="bx bx-share-alt"></i>
             <h3>Social Profiles</h3>
             <div class="social-links">
               <a href="https://www.facebook.com/sachin.rv.792" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/sach.rv" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.instagram.com/iamsachinrv" class="instagram"><i class="bi bi-instagram"></i></a>
               <a href="https://www.linkedin.com/in/sachrv" class="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-        </div>
-
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-envelope"></i>
             <h3>Email Me</h3>
             <p>sachinrv1999@gmail.com</p>
           </div>
         </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Call Me</h3>
-            <p>+91 7829607889</p>
-          </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="col-lg-7">
+          <form id="contact-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="sent-message" style="display:none;">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+            <div class="loading" style="display:none;">Loading...</div>
+            <div class="error-message" style="display:none;">Sorry, something went wrong. Please try again.</div>
+          </form>
         </div>
       </div>
-
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-          </div>
-        </div>
-        <div class="form-group mt-3">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-        </div>
-        <div class="my-3">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
-        </div>
-        <div class="text-center"><button type="submit">Send Message</button></div>
-      </form>
-
     </div>
-  </section><!-- End Contact Section -->
+  </section>
+  <!-- End Contact Section -->
+
 
   <div class="credits">
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    Designed by <a href="https://instagram.com/sach.rv">Sachin</a>
+    Designed by <a href="https://instagram.com/iamsachinrv">Sachin</a>
   </div>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -567,6 +687,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 </body>
 
