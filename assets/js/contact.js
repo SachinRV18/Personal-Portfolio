@@ -1,11 +1,11 @@
 // Initialize EmailJS
-emailjs.init("78a7SJFc0YaHV9odN"); // Replace with your EmailJS User ID
+emailjs.init("78a7SJFc0YaHV9odN");
 
 // Get the form and submit event
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
     // Show loading message
     document.querySelector(".loading").style.display = "block";
