@@ -1,5 +1,5 @@
 // Initialize EmailJS
-emailjs.init("1gWKBPzwi1RJaWjz4"); // Replace with your EmailJS User ID
+emailjs.init("78a7SJFc0YaHV9odN"); // Replace with your EmailJS User ID
 
 // Get the form and submit event
 document
@@ -11,7 +11,7 @@ document
     document.querySelector(".loading").style.display = "block";
 
     // Send the email
-    emailjs.sendForm("service_gbjs4qu", "template_fldz9fo", this).then(
+    emailjs.sendForm("service_zqcnd54", "template_fldz9fo", this).then(
       function (response) {
         // Hide loading and show success message
         document.querySelector(".loading").style.display = "none";

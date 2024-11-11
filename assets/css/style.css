@@ -1,11 +1,3 @@
-/**
-* Template Name: Personal
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -1198,7 +1190,7 @@ section .container {
 
 /* Button styling */
 #contact-form button[type="submit"] {
-  background: #266df0;
+  background: #18d26e;
   padding: 10px 30px;
   color: #fff;
   font-size: 1.1rem;
@@ -1211,7 +1203,7 @@ section .container {
 }
 
 #contact-form button[type="submit"]:hover {
-  background: hsl(234, 68%, 55%);
+  background: #15bb62;
 }
 
 /* Message boxes styling */
@@ -1228,16 +1220,8 @@ section .container {
 
 #contact-form .sent-message {
   display: none;
-  color: #82be6a;
-  background-color: #030303;
-  border: 1px solid #c3e6cb;
-  border-radius: 6px;
-  padding: 0.75rem;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  animation: fadeIn 0.5s ease-out;
+  background-color: #18d26e;
+  color: #fff;
 }
 
 #contact-form .error-message {
@@ -1275,7 +1259,6 @@ section .container {
   border-top-color: #eee;
   animation: animate-loading 1s linear infinite;
 }
-
 
 /*--------------------------------------------------------------
 # Credits
