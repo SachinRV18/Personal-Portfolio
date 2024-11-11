@@ -1,3 +1,11 @@
+/**
+* Template Name: Personal
+* Updated: Jul 27 2023 with Bootstrap v5.3.1
+* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -1092,11 +1100,6 @@ section .container {
   color: #444444;
 }
 
-/* Section title */
-.contact .section-title {
-  text-align: center;
-  margin-bottom: 2rem;
-}
 
 /* Contact Info Box Styling */
 .contact .info-box {
@@ -1151,14 +1154,94 @@ section .container {
 
 /* General form styling */
 #contact-form {
-  max-width: 500px;
-  margin: 3rem auto;
-  padding: 2rem;
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 4px 12px rgba(221, 205, 205, 0.062);
   font-family: Arial, sans-serif;
 }
+
+/* Container for Contact Section */
+.contact-section {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  background-color: #0c0a0a00;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+.contact-header {
+  margin-bottom: 2rem;
+}
+
+.contact-header i {
+  font-size: 2.5rem;
+  color: #18d26e; 
+  margin-bottom: 1rem;
+  animation: iconBounce 1s ease-in-out infinite;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #bbb;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+/* Modern Icon Bounce Effect */
+@keyframes iconBounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+#contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+#contact-form .form-control {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: 0.3s;
+}
+
+#contact-form .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+#contact-form button {
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+  background-color: #008c9e;
+}
+
 
 /* Form field styling */
 #contact-form .form-group {
@@ -1190,7 +1273,7 @@ section .container {
 
 /* Button styling */
 #contact-form button[type="submit"] {
-  background: #18d26e;
+  background: #4628cc;
   padding: 10px 30px;
   color: #fff;
   font-size: 1.1rem;
@@ -1203,7 +1286,7 @@ section .container {
 }
 
 #contact-form button[type="submit"]:hover {
-  background: #15bb62;
+  background: #61a774;
 }
 
 /* Message boxes styling */
